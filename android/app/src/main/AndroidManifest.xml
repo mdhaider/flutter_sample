@@ -8,8 +8,13 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_sample"
+        android:label="Clik Flutter"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- Add the following entry, with your API key -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCBeD6DQlpF5IvKJ1MfEiCsTZHwvo2r4ig"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
