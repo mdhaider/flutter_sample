@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/files/FilesScreen.dart';
+import 'package:flutter_sample/loader/LoaderScreen.dart';
 import 'package:flutter_sample/gmaps/MapsScreen.dart';
-import 'package:flutter_sample/home/MyCard.dart';
 import 'package:flutter_sample/constants/Constants.dart' as Constants;
 
 class MyApp extends StatelessWidget {
@@ -17,12 +17,16 @@ class MyApp extends StatelessWidget {
     Navigator.push(context, MaterialPageRoute(builder: (context) => FilesScreen()));
   }
 
+  void goToLoader() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
     this.context=context;
     final double myTextSize = 30.0;
     final TextStyle myTextStyle =
-        TextStyle(color: Colors.green, fontSize: myTextSize);
+        TextStyle(color: Colors.redAccent, fontSize: myTextSize);
 
     var column = Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -30,29 +34,29 @@ class MyApp extends StatelessWidget {
         new RaisedButton(
           padding: const EdgeInsets.all(12.0),
           textColor: Colors.white,
-          color: Colors.green,
+          color: Colors.redAccent,
           onPressed: goToMaps,
           child: new Text(Constants.GOOGLE_MAPS),
         ),
         new RaisedButton(
           padding: const EdgeInsets.all(12.0),
           textColor: Colors.white,
-          color: Colors.green,
+          color: Colors.redAccent,
           onPressed: goToFiles,
           child: new Text(Constants.SELECT_FILE),
         ),
         new RaisedButton(
           padding: const EdgeInsets.all(12.0),
           textColor: Colors.white,
-          color: Colors.green,
+          color: Colors.redAccent,
           onPressed: goToMaps,
           child: new Text(Constants.RECORD_VIDEO),
         ),
         new RaisedButton(
           padding: const EdgeInsets.all(12.0),
           textColor: Colors.white,
-          color: Colors.green,
-          onPressed: goToFiles,
+          color: Colors.redAccent,
+          onPressed: goToLoader,
           child: new Text(Constants.ANIM_LOAD),
         ),
       ],

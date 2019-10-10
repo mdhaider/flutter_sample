@@ -11,7 +11,7 @@ class FilesScreen extends StatelessWidget {
       ),
       body: Center(child: RaisedButton(
         child: Text('hi'),
-        textColor: Colors.amber,
+        textColor: Colors.redAccent,
         onPressed: () => Navigator.pop(context),
       ),),
     );

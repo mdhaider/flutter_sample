@@ -7,6 +7,6 @@ void main() {
       title: "ClikSource Sample",
       home: MyApp(),
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
       )));
 }
