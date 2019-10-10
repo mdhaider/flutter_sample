@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/files/FilesScreen.dart';
+import 'package:flutter_sample/gmaps/MapsScreen.dart';
 import 'package:flutter_sample/home/MyCard.dart';
+import 'package:flutter_sample/constants/Constants.dart' as Constants;
 
 class MyApp extends StatelessWidget {
+
+  int number=0;
+   BuildContext context;
+
+  void goToMaps() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MapsScreen()));
+  }
+
+  void goToFiles() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => FilesScreen()));
+  }
+
   @override
   Widget build(BuildContext context) {
+    this.context=context;
     final double myTextSize = 30.0;
     final TextStyle myTextStyle =
         TextStyle(color: Colors.green, fontSize: myTextSize);
@@ -11,34 +27,34 @@ class MyApp extends StatelessWidget {
     var column = Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        MyCard(
-          title: Text(
-            "Google Maps",
-            style: myTextStyle,
-          ),
-          screenName: 1,
+        new RaisedButton(
+          padding: const EdgeInsets.all(12.0),
+          textColor: Colors.white,
+          color: Colors.green,
+          onPressed: goToMaps,
+          child: new Text(Constants.GOOGLE_MAPS),
         ),
-        MyCard(
-          title: Text(
-            "Select/Upload a file",
-            style: myTextStyle,
-          ),
-          screenName: 2,
+        new RaisedButton(
+          padding: const EdgeInsets.all(12.0),
+          textColor: Colors.white,
+          color: Colors.green,
+          onPressed: goToFiles,
+          child: new Text(Constants.SELECT_FILE),
         ),
-        MyCard(
-          title: Text(
-            "Record/Upload a Video",
-            style: myTextStyle,
-          ),
-          screenName: 3,
+        new RaisedButton(
+          padding: const EdgeInsets.all(12.0),
+          textColor: Colors.white,
+          color: Colors.green,
+          onPressed: goToMaps,
+          child: new Text(Constants.RECORD_VIDEO),
         ),
-        MyCard(
-          title: Text(
-            "Show Animated Loader",
-            style: myTextStyle,
-          ),
-          screenName: 4,
-        )
+        new RaisedButton(
+          padding: const EdgeInsets.all(12.0),
+          textColor: Colors.white,
+          color: Colors.green,
+          onPressed: goToFiles,
+          child: new Text(Constants.ANIM_LOAD),
+        ),
       ],
     );
 
