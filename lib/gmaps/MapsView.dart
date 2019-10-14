@@ -1,19 +1,16 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MapsScreen extends StatefulWidget {
+class MapsView extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _MapsScreen();
-  }
+  _MyAppState createState() => _MyAppState();
 }
 
-class _MapsScreen extends State<MapsScreen> {
+class _MyAppState extends State<MapsView> {
   Completer<GoogleMapController> _controller = Completer();
+
   static const LatLng _center = const LatLng(45.521563, -122.677433);
 
   final Set<Marker> _markers = {};
@@ -58,7 +55,7 @@ class _MapsScreen extends State<MapsScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Maps'),
+          title: Text('Maps Sample App'),
           backgroundColor: Colors.green[700],
         ),
         body: Stack(

@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  video_player: ^0.10.1
   flutter:
     sdk: flutter
 
@@ -26,6 +27,7 @@ dependencies:
   google_maps_flutter: ^0.4.0
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
 
@@ -40,6 +42,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - assets/videos/vid.mp4
 
   # To add assets to your application, add an assets section, like this:
   # assets:

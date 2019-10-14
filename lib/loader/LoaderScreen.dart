@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
+class LoaderScreen extends StatefulWidget {
   @override
-  ForgotPasswordScreenState createState() {
-    return new ForgotPasswordScreenState();
+  LoaderScreenState createState() {
+    return new LoaderScreenState();
   }
 }
 
-class ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class LoaderScreenState extends State<LoaderScreen> {
   final emailController = new TextEditingController();
 //  final authHandler = new Auth();
   bool isLoading = false;

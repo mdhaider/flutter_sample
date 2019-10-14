@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/files/FilesScreen.dart';
-import 'package:flutter_sample/gmaps/MapsScreen.dart';
+import 'package:flutter_sample/gmaps/MapsWithoutMarker.dart';
 
 class MyCard extends StatelessWidget {
   final Widget title;
@@ -14,7 +14,7 @@ class MyCard extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.only(bottom: 1.0),
         child: InkWell(
-          onTap: () =>  Navigator.push(context, MaterialPageRoute(builder: (context) => MapsScreen())),
+          onTap: () =>  Navigator.push(context, MaterialPageRoute(builder: (context) => MapsWithoutMarker())),
           child: Card(
             child: Container(
               padding: const EdgeInsets.all(20.0),
@@ -37,16 +37,16 @@ class MyCard extends StatelessWidget {
    goTo(number) {
     switch (number) {
       case 1:
-        MapsScreen();
+        MapsWithoutMarker();
         break;
       case 2:
         FilesScreen();
         break;
       case 3:
-        MapsScreen();
+        MapsWithoutMarker();
         break;
       case 4:
-        MapsScreen();
+        MapsWithoutMarker();
         break;
     }
   }
